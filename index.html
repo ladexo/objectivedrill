@@ -3,14 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ObjectiveDrill — Practice to the objective" />
+    <meta property="og:description" content="Original Security+ SY0-701 practice: MCQs, performance-based questions and full practice exams mapped to the official objectives." />
+    <meta property="og:image" content="https://ladexo.github.io/objectivedrill/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#0B0F14" />
     <meta name="description" content="ObjectiveDrill — Practice to the objective, not the dump. Unofficial cert practice." />
     <title>ObjectiveDrill — Practice to the objective</title>
-    <script type="module" crossorigin src="./assets/index-DpvRd0TW.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-CBSKdXva.css">
+    <script type="module" crossorigin src="./assets/index-CW5NUjmc.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/Icon-BH3P0Btr.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DsJqzkCm.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin="" href="./assets/inter-latin-wght-normal-Dx4kXJAl.woff2">
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+        window.addEventListener('load', function () { navigator.serviceWorker.register('./sw.js').catch(function () {}); });
+      }
+    </script>
   </body>
 </html>
