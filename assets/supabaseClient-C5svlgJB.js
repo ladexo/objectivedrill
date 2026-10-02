@@ -1,0 +1,1 @@
+import{t as e}from"./vendor-supabase-Bl13M3oS.js";function t(t,n){return e(t,n,{auth:{persistSession:!0,autoRefreshToken:!0,detectSessionInUrl:!1,flowType:`pkce`}})}export{t as createSupabaseClient};

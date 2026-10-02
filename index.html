@@ -11,12 +11,33 @@
     <meta property="og:image" content="https://ladexo.github.io/objectivedrill/og-image.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark light" />
     <meta name="theme-color" content="#0B0F14" />
+    <script>
+      /* Theme before first paint (no flash). Mirrors src/lib/theme.ts: key objectivedrill.theme.v1, pref system|light|dark. */
+      (function () {
+        var pref = 'system';
+        try {
+          var raw = localStorage.getItem('objectivedrill.theme.v1');
+          if (raw) {
+            try { var v = JSON.parse(raw); v = v && typeof v === 'object' ? v.pref : v; if (v === 'light' || v === 'dark') pref = v; }
+            catch (e) { if (raw === 'light' || raw === 'dark') pref = raw; }
+          }
+        } catch (e) {}
+        var t = pref === 'system' ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark') : pref;
+        var d = document.documentElement;
+        d.setAttribute('data-theme', t);
+        d.setAttribute('data-theme-pref', pref);
+        var m = document.querySelector('meta[name="theme-color"]');
+        if (m) m.setAttribute('content', t === 'light' ? '#F3F6F9' : '#0B0F14');
+      })();
+    </script>
     <meta name="description" content="ObjectiveDrill — Practice to the objective, not the dump. Unofficial cert practice." />
     <title>ObjectiveDrill — Practice to the objective</title>
-    <script type="module" crossorigin src="./assets/index-BQ1_0nEY.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/Icon-BH3P0Btr.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-C28deyhE.css">
+    <script type="module" crossorigin src="./assets/index-eJ14Y7Gx.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CbXtAM7H.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-react-px8yGROa.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DnKxOi5h.css">
     <link rel="preload" as="font" type="font/woff2" crossorigin="" href="./assets/inter-latin-wght-normal-Dx4kXJAl.woff2">
   </head>
   <body>
