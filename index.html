@@ -34,7 +34,7 @@
     </script>
     <meta name="description" content="ObjectiveDrill — Practice to the objective, not the dump. Unofficial cert practice." />
     <title>ObjectiveDrill — Practice to the objective</title>
-    <script type="module" crossorigin src="./assets/index-eJ14Y7Gx.js"></script>
+    <script type="module" crossorigin src="./assets/index-BOF34oQ9.js"></script>
     <link rel="modulepreload" crossorigin href="./assets/rolldown-runtime-CbXtAM7H.js">
     <link rel="modulepreload" crossorigin href="./assets/vendor-react-px8yGROa.js">
     <link rel="stylesheet" crossorigin href="./assets/index-DnKxOi5h.css">
@@ -44,6 +44,13 @@
     <div id="root"></div>
     <script>
       if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
+        /* A new worker took over an already-controlled page: reload once so the page and its hashed chunks match the new deploy (not mid-exam). */
+        var hadController = !!navigator.serviceWorker.controller, reloading = false;
+        navigator.serviceWorker.addEventListener('controllerchange', function () {
+          if (!hadController || reloading || /^#\/exam/.test(location.hash)) return;
+          reloading = true;
+          location.reload();
+        });
         window.addEventListener('load', function () { navigator.serviceWorker.register('./sw.js').catch(function () {}); });
       }
     </script>
